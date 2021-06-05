@@ -34,7 +34,7 @@ body{
 }
 
 .container {
-    width: 75%;
+    width:90%;
     margin: auto;
     padding-top: 30px;
 }
@@ -57,7 +57,7 @@ main section{
 
     height:10rem;
     width:10rem;
-    background-color: #c0ff3c;
+    background-color: rgb(192, 255, 60);
     opacity: .8;
     filter: blur(80px);
     border-radius: 50%;
@@ -86,12 +86,11 @@ h3 {font-weight:400;}
 
 /* Form */
 
-.form-upper{
-    margin-bottom:40px;
-}
+.form-upper{margin-bottom:40px;}
+.form-upper input{margin-bottom:40px;}
 
 .input-box select, .input-box input{
-    width:10rem;
+    width:8rem;
     margin-top:10px;
     line-height:1.5;
     height:2rem;
@@ -132,6 +131,13 @@ h3 {font-weight:400;}
     
     vertical-align:middle;
     cursor:pointer;
+
+    transition: background-color ease 0.5s;
+}
+
+.btn:hover{
+    background-color: rgb(69, 104, 220);
+    transition: background-color ease 0.5s;
 }
 
 .rounded-pill{
@@ -142,27 +148,58 @@ h3 {font-weight:400;}
 /* Output ticket */
 
 .ticket{
-    background: linear-gradient(-45deg, #4568dc, #b06ab3);
+    background: linear-gradient(-45deg, rgb(69, 104, 220), rgb(176, 106, 179));
     border-radius:15px;
     color:rgb(255, 255, 255);
     padding:50px 20px;
 }
 
 .ticket > div{
-    margin:0 3%;
+    margin:20px 0;
+}
+
+.output-box{
+    width:100%;
 }
 
 .separator{
     display: inline-block;
-    height:125px;
-    border-left:1px solid white;
+    width:100%;
+    margin:20px 0;
+    height: 1px;
+    border-bottom: 1px solid white;
 }
 
 #nomeOutput{
     font-family: 'Clash Display', sans-serif;
     letter-spacing: 0.5px;
     font-size:2rem;
+    width:100%;
 }
 
+/* Responsive */
+
+@media screen and (min-width:768px){
+    .container {width: 75%;}
+
+    .form-upper input{margin-bottom:0;}
+
+    .input-box select, .input-box input{width:10rem;}
+
+    .ticket > div {margin:0 3%;}
+
+    .ticket{flex-wrap: nowrap !important;}
+
+    .output-box{width:auto;}
+
+    #nomeOutput {width:auto;}
+
+    .separator{
+        width:1px;
+        height:125px;
+        border-left:1px solid white;
+        border-bottom: none;
+    }
+}
 
 
