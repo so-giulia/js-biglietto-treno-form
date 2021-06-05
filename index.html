@@ -27,10 +27,8 @@
                 <h2>Calcola il prezzo del tuo biglietto</h2>
                 <!-- input title end -->
 
-                <!-- input form start -->
-                <form>
-                    <!-- form upper start -->
-                    <div class="row justify-evenly text-center">
+                <!-- form upper start -->
+                <div class="form-upper row justify-evenly text-center">
                         <div class="input-box row-vert">
                             <label class="b" for="nome">Nome</label>
                             <input type="text" id="nome" name="fname" value="">
@@ -49,28 +47,31 @@
                                 <option value="over">65 +</option>
                             </select>
                         </div>    
-                    </div>
-                    <!-- form upper end -->
+                </div>
+                <!-- form upper end -->
 
-                    <!-- form lower tart -->
-                    <div class="row justify-center">
-                        <a href="#" class="btn text-center rounded-pill">Genera</a>
-                        <a href="#" class="btn text-center rounded-pill">Annulla</a>
-                    </div> 
-                    <!-- form lower end -->
-                </form> 
-                <!-- input form end -->    
+                <!-- form lower tart -->
+                <div class="form-lower row justify-center">
+                    <button id="genera" class="btn text-center rounded-pill">
+                        Genera
+                    </button>
+                        
+                    <button id="annulla" class="btn text-center rounded-pill">
+                        Annulla
+                    </button>
+                </div> 
+                <!-- form lower end -->
             </section>
             <!-- input section end -->
     
             <!-- output section start -->
-            <section id="output">
+            <section id="output" class="hide">
                 <!-- output title start -->
                 <h2>Il tuo biglietto</h2>
                 <!-- output title end -->
 
                 <div class="ticket row align-center justify-between">
-                    <div id="nomeOutput" class="fancy">Pippo</div>
+                    <div id="nomeOutput" class="fancy"></div>
                     <span class="separator"></span>
 
                     <div class="output-box row-vert">

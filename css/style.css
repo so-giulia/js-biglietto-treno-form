@@ -11,6 +11,7 @@
 html {font-size:14px;}
 
 .b {display: block;}
+.hide {display: none;}
 .text-center {text-align: center;}
 
 /* Common flex */
@@ -85,8 +86,8 @@ h3 {font-weight:400;}
 
 /* Form */
 
-form div:first-child{
-    margin-bottom:30px;
+.form-upper{
+    margin-bottom:40px;
 }
 
 .input-box select, .input-box input{
@@ -100,7 +101,7 @@ form div:first-child{
     font-size:1.2rem;
 }
 
-form input, form select{
+.form-upper input, .form-upper select{
     border-top:none;
     border-left:none;
     border-right:none;
@@ -109,7 +110,7 @@ form input, form select{
     background-color:transparent;
 }
 
-form input:focus-visible, form select:focus-visible{
+.form-upper input:focus-visible, .form-upper select:focus-visible{
     outline: none;
 }
 
@@ -118,6 +119,7 @@ form input:focus-visible, form select:focus-visible{
     padding:8px 5%;
 
     background-color: rgb(0, 0, 0);
+    border:none;
     color:rgb(255, 255, 255);
     margin:0 1%;
 
@@ -127,7 +129,6 @@ form input:focus-visible, form select:focus-visible{
     line-height:1.5;
     text-transform: uppercase;
     text-decoration:none;
-    
     
     vertical-align:middle;
     cursor:pointer;
@@ -162,4 +163,6 @@ form input:focus-visible, form select:focus-visible{
     letter-spacing: 0.5px;
     font-size:2rem;
 }
+
+
 
