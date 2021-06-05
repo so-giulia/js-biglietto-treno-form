@@ -9,9 +9,10 @@
 //Bonus: aggiungete qualche controllo sui dati di input!
 
 
+//————————————————————————
+// *** FUNZIONE GENERA ***
+//————————————————————————
 
-
-//Genera
 var genera = document.getElementById("genera");
 
 genera.addEventListener("click", function(){
@@ -28,12 +29,29 @@ genera.addEventListener("click", function(){
     document.getElementById("nomeOutput").innerHTML = nome;
     document.getElementById("nomeOutput").innerHTML += "<br>" + cognome;
 
+    //——————————————————————————
+    //aggiungo gli altri valori:
+    //——————————————————————————
+
+    //codice treno
+    var cpCode = Math.round(Math.random() * (100000 - 90000) + 90000);
+    document.getElementById("codiceCpOutput").innerHTML = cpCode;
+
+    //numero carrozza
+    var carrozza = Math.round(Math.random() * (9 - 1) + 1);
+    document.getElementById("carrozzaOutput").innerHTML = carrozza;
+
 });
 
-//Annulla
+
+//—————————————————————————
+// *** FUNZIONE ANNULLA ***
+//—————————————————————————
+
 var annulla = document.getElementById("annulla");
 
 annulla.addEventListener("click", function(){
+
     //nascondo il biglietto
     document.getElementById("output").className = "hide";
 });
