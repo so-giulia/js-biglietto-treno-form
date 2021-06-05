@@ -1,15 +1,4 @@
-//Creiamo un finto biglietto del treno con:
-//**OK** Nome passeggero
-//**OK** Codice treno (numero casuale tra 90000 e 100000 escluso)
-//**OK** Numero carrozza (numero casuale tra 1 e 9 incluso)
 
-//Prezzo calcolato in base all'esercizio visto in precedenza
-//Categoria selezionata dall'utente
-
-//**OK** Al click su "Genera" appare la schermata con le caratteristiche del biglietto.
-//**OK** Al click su "Annulla" dobbiamo ripulire il form 
-
-//Bonus: aggiungete qualche controllo sui dati di input!
 
 
 //————————————————————————
@@ -25,7 +14,13 @@ genera.addEventListener("click", function(){
 
     //prendo i valori
     var nome = document.getElementById("nome").value;
-    var km = document.getElementById("km").value;
+    var nome = nome.charAt(0).toUpperCase() + nome.slice(1);
+
+    //**Bonus controlli:**
+    if(nome == null || nome == ""){
+        alert("Inserisci il tuo nome");
+        document.getElementById("output").className = "hide";
+    }
 
     //li visualizzo nel biglietto
     document.getElementById("nomeOutput").innerHTML = nome;
@@ -42,15 +37,35 @@ genera.addEventListener("click", function(){
     var carrozza = Math.round(Math.random() * (9 - 1) + 1);
     document.getElementById("carrozzaOutput").innerHTML = carrozza;
 
-    //calcolo prezzo in base all'età
+    //———————————————————
+    //calcolo del prezzo:
+    //———————————————————
+
+    var km = document.getElementById("km").value;
     var prezzo = km * 0.21;
+
     var age = document.getElementById("age").selectedIndex;
 
-    if(age == "0"){
+    //**Bonus controlli:**
+    if(km == null || km == ""){
+        alert("Inserisci i km");
+        document.getElementById("output").className = "hide";
+    }else if(isNaN(km)){
+        alert("I km devono essere espressi in numeri");
+        document.getElementById("output").className = "hide";
+    }
+
+    //**Bonus controlli:**
+    if(age == null || age == "0"){
+        alert("Seleziona la tua età");
+        document.getElementById("output").className = "hide";
+    }
+
+    if(age == "1"){
         prezzo = parseFloat((prezzo - (prezzo * 0.2)).toFixed(2));
         document.getElementById("offertaOutput").innerHTML = "Sconto minorenni";
         document.getElementById("costoOutput").innerHTML = prezzo + "€";
-    }else if(age == "2"){
+    }else if(age == "3"){
         prezzo = parseFloat((prezzo - (prezzo * 0.4)).toFixed(2));
         document.getElementById("offertaOutput").innerHTML = "Sconto over 65";
         document.getElementById("costoOutput").innerHTML = prezzo + "€";
@@ -58,6 +73,7 @@ genera.addEventListener("click", function(){
         document.getElementById("offertaOutput").innerHTML = "Nessuna offerta";
         document.getElementById("costoOutput").innerHTML = prezzo + "€";
     }
+
 });
 
 
