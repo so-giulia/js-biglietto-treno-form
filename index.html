@@ -4,11 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://api.fontshare.com/css?f[]=clash-display@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <!-- My Css -->
     <link rel="stylesheet" href="css/style.css">
+
     <title>Calcolo biglietto treno</title>
 </head>
 <body>
     
+    <main>
+        <div class="container">
+            <!-- input section start -->
+            <section id="input">
+
+                <div class="circle-bg"></div>
+
+                <!-- input title start -->
+                <h2>Calcola il prezzo del tuo biglietto</h2>
+                <!-- input title end -->
+
+                <!-- input form start -->
+                <form>
+                    <!-- form upper start -->
+                    <div class="row justify-evenly text-center">
+                        <div class="input-box row-vert">
+                            <label class="b" for="nome">Nome</label>
+                            <input type="text" id="nome" name="fname" value="">
+                        </div>
+    
+                        <div class="input-box row-vert">
+                            <label class="b" for="cognome">Cognome</label>
+                            <input type="text" id="cognome" name="fname" value="">
+                        </div>
+    
+                        <div class="input-box row-vert">
+                            <label class="b" for="age">Fascia d'età</label>
+                            <select id="age" name="age">
+                                <option value="minorenne">0 - 18</option>
+                                <option value="adulto">18 - 65</option>
+                                <option value="over">65 +</option>
+                            </select>
+                        </div>    
+                    </div>
+                    <!-- form upper end -->
+
+                    <!-- form lower tart -->
+                    <div class="row justify-center">
+                        <a href="#" class="btn text-center rounded-pill">Genera</a>
+                        <a href="#" class="btn text-center rounded-pill">Annulla</a>
+                    </div> 
+                    <!-- form lower end -->
+                </form> 
+                <!-- input form end -->    
+            </section>
+            <!-- input section end -->
+    
+            <!-- output section start -->
+            <section id="output">
+                <!-- output title start -->
+                <h2>Il tuo biglietto</h2>
+                <!-- output title end -->
+
+                <div class="ticket row align-center justify-between">
+                    <div id="nomeOutput" class="fancy">Pippo</div>
+                    <span class="separator"></span>
+
+                    <div class="output-box row-vert">
+                        <h3>Offerta</h3>
+                        <div class="outputText" id="offertaOutput">Nessuna offerta</div>
+                    </div>
+
+                    <div class="output-box row-vert">
+                        <h3>Carrozza</h3>
+                        <div class="outputText" id="carrozzaOutput">7</div>
+                    </div>
+
+                    <div class="output-box row-vert">
+                        <h3>Codice CP</h3>
+                        <div class="outputText" id="codiceCpOutput">94939</div>
+                    </div>
+
+                    <div class="output-box row-vert">
+                        <h3>Costo biglietto</h3>
+                        <div class="outputText" id="costoOutput">79.99€</div>
+                    </div>
+                </div>
+            </section>
+            <!-- output section end -->
+        </div>
+    </main>
 
     <!-- Script -->
     <script type="text/javascript" src="js/script.js"></script>

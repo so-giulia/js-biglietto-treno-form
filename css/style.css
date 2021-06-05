@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+/* Common */
+
+html {font-size:14px;}
+
+.b {display: block;}
+.text-center {text-align: center;}
+
+/* Common flex */
+
+.row {display: flex; flex-wrap: wrap;}
+.row-vert {flex-direction:column;}
+.justify-evenly {justify-content: space-evenly;}
+.justify-center {justify-content: center;}
+.justify-between {justify-content: space-between;}
+.align-center {align-items: center;}
+
+
+
+/* Struttura */
+
+body{
+    background-color:rgb(244, 244, 244);
+    color: rgb(0, 0, 0);
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+main section{
+    padding:20px;
+    margin-bottom:30px;
+}
+
+#input{
+    position: relative;
+}
+
+.circle-bg{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    height:10rem;
+    width:10rem;
+    background-color: #c0ff3c;
+    opacity: .8;
+    filter: blur(80px);
+    border-radius: 50%;
+}
+
+
+/* Text */
+
+section h2{
+    font-family: 'Clash Display', sans-serif;
+    text-align:center;
+    letter-spacing: 0.5px;
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+h3 {font-weight:400;}
+.ticket h3{margin-bottom:8px;}
+
+.ticket .outputText{
+    font-weight:300;
+    letter-spacing: 0.5px;
+}
+
+
+
+/* Form */
+
+form div:first-child{
+    margin-bottom:30px;
+}
+
+.input-box select, .input-box input{
+    width:10rem;
+    margin-top:10px;
+    line-height:1.5;
+    height:2rem;
+}
+
+.input-box label{
+    font-size:1.2rem;
+}
+
+form input, form select{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-radius:0;
+    border-bottom:1px solid rgb(0, 0, 0);
+    background-color:transparent;
+}
+
+form input:focus-visible, form select:focus-visible{
+    outline: none;
+}
+
+.btn{
+    display:inline-block;
+    padding:8px 5%;
+
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    margin:0 1%;
+
+    font-weight:400;
+    font-size: .9rem;
+    letter-spacing: 0.5px;
+    line-height:1.5;
+    text-transform: uppercase;
+    text-decoration:none;
+    
+    
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+.rounded-pill{
+    border-radius:50rem!important
+}
+
+
+/* Output ticket */
+
+.ticket{
+    background: linear-gradient(-45deg, #4568dc, #b06ab3);
+    border-radius:15px;
+    color:rgb(255, 255, 255);
+    padding:50px 20px;
+}
+
+.ticket > div{
+    margin:0 3%;
+}
+
+.separator{
+    display: inline-block;
+    height:125px;
+    border-left:1px solid white;
+}
+
+#nomeOutput{
+    font-family: 'Clash Display', sans-serif;
+    letter-spacing: 0.5px;
+    font-size:2rem;
+}
+
