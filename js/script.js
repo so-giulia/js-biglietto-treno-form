@@ -27,11 +27,11 @@ genera.addEventListener("click", function(){
     //——————————————————————————
 
     //codice treno
-    var cpCode = Math.round(Math.random() * (100000 - 90000) + 90000);
+    var cpCode = Math.round(Math.random() * 100000) + 90000;
     document.getElementById("codiceCpOutput").innerHTML = cpCode;
 
     //numero carrozza
-    var carrozza = Math.round(Math.random() * (9 - 1) + 1);
+    var carrozza = Math.round(Math.random() * 9) + 1;
     document.getElementById("carrozzaOutput").innerHTML = carrozza;
 
     //———————————————————
