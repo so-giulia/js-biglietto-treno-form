@@ -50,6 +50,9 @@ genera.addEventListener("click", function(){
     }else if(isNaN(km)){
         alert("I km devono essere espressi in numeri");
         document.getElementById("output").className = "hide";
+    }else if(km <= 0){
+        alert("I km devono essere maggiori di 1");
+        document.getElementById("output").className = "hide"
     }
 
     //**Bonus controlli:**
@@ -81,6 +84,11 @@ genera.addEventListener("click", function(){
 var annulla = document.getElementById("annulla");
 
 annulla.addEventListener("click", function(){
+    //ripulisco il form
+    document.getElementById("nome").value = "";
+    document.getElementById("km").value = "";
+    document.getElementById("age").value = "";
+    
     //nascondo il biglietto
     document.getElementById("output").className = "hide";
 });
